@@ -1,0 +1,116 @@
+<project  xmlns="http://maven.apache.org/POM/4.0.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+   <modelVersion>4.0.0</modelVersion>  
+ 
+   <groupId>com.my-group.app</groupId>  
+   <artifactId>sys-kilo-doc-nosql</artifactId>  
+   <version>1.0-SNAPSHOT</version>  
+   <build>  
+       <pluginManagement>  
+           <plugins>  
+               <plugin>  
+                   <groupId>org.liquibase</groupId>  
+                   <artifactId>liquibase-maven-plugin</artifactId>  
+                   <version>3.8.0</version>  
+                   <configuration>  
+                       <propertyFile>liquibase.properties</propertyFile>  
+                   </configuration>  
+                  
+                   <dependencies>  
+                    <!--
+                     <dependency>
+                        <groupId>com.datastax.jdbc</groupId>
+                        <artifactId>CassandraJDBC42</artifactId>
+                        <version>4.2</version>
+                        <scope>system</scope>
+                        <systemPath>${basedir}/lib/CassandraJDBC42.jar</systemPath>
+                    </dependency>
+                    -->
+                    
+                    <dependency>
+                        <groupId>com.datastax.oss</groupId>
+                        <artifactId>java-driver-core</artifactId>
+                        <version>4.15.0</version>
+                    </dependency>
+
+                    <dependency>
+                        <groupId>com.datastax.oss</groupId>
+                        <artifactId>java-driver-query-builder</artifactId>
+                        <version>4.15.0</version>
+                        </dependency>
+
+                        <dependency>
+                        <groupId>com.datastax.oss</groupId>
+                        <artifactId>java-driver-mapper-runtime</artifactId>
+                        <version>4.15.0</version>
+                        </dependency>
+
+                        <dependency>
+    <groupId>com.ing.data</groupId>
+    <artifactId>cassandra-jdbc-wrapper</artifactId>
+    <version>4.8.0</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.tinkerpop</groupId>
+	<artifactId>tinkergraph-gremlin</artifactId>
+	<version>3.3.3</version>
+</dependency>
+
+<dependency>
+	<groupId>com.esri.geometry</groupId>
+	<artifactId>esri-geometry-api</artifactId>
+	<version>2.0.0</version>
+</dependency>
+
+<dependency>
+	<groupId>com.datastax.oss</groupId>
+	<artifactId>java-driver-core-shaded</artifactId>
+	<version>4.0.0-beta3</version>
+</dependency>
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-all</artifactId>
+    <version>5.0.0.Alpha2</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.tinkerpop</groupId>
+    <artifactId>gremlin-core</artifactId>
+    <version>3.6.2</version>
+</dependency>
+
+<!--
+                    <dependency>
+  <groupId>com.datastax.cassandra</groupId>
+  <artifactId>cassandra-driver-core</artifactId>
+  <version>3.11.3</version>
+</dependency>
+
+<dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-mapping</artifactId>
+            <version>3.11.3</version>
+        </dependency>
+                    -->
+
+                    <!--                    <dependency>
+                        <groupId>org.apache-extras.cassandra-jdbc</groupId>
+                        <artifactId>cassandra-jdbc</artifactId>
+                        <version>1.2.5</version>
+                    </dependency>
+                    -->
+
+
+                    <dependency>
+                        <groupId>org.liquibase.ext</groupId>
+                        <artifactId>liquibase-cassandra</artifactId>
+                        <version>4.20.0</version>
+                    </dependency>
+                 </dependencies>  
+               </plugin>  
+           </plugins>  
+       </pluginManagement>  
+   </build>  
+ </project>
